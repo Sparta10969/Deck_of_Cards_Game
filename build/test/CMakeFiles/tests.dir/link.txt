@@ -1,0 +1,1 @@
+/usr/bin/c++ --coverage CMakeFiles/tests.dir/card_tests.cpp.o CMakeFiles/tests.dir/deck_of_cards_tests.cpp.o -o tests  ../lib/liblib.a /usr/lib/libCatch2Main.a /usr/lib/libCatch2.a 

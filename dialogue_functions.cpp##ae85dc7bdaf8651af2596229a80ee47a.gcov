@@ -1,0 +1,919 @@
+        -:    0:Source:/mnt/c/Users/Nastya/Desktop/infa/OPP/bdz1/main/dialogue_functions.cpp
+        -:    0:Graph:build/main/CMakeFiles/main.dir/dialogue_functions.cpp.gcno
+        -:    0:Data:build/main/CMakeFiles/main.dir/dialogue_functions.cpp.gcda
+        -:    0:Runs:0
+        -:    1:#include <iostream>
+        -:    2:#include <limits>
+        -:    3:#include "dialogue_functions.h"
+        -:    4:
+function check_input() called 0 returned 0% blocks executed 0%
+    #####:    5:bool check_input(){
+    #####:    6:    if (std::cin.eof()) return true; 
+    %%%%%:    6-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:    6-block  1
+    #####:    7:    std::cin.clear();
+    %%%%%:    7-block  0
+call    0 never executed
+    #####:    8:    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+call    0 never executed
+call    1 never executed
+    #####:    9:    return false;
+        -:   10:}
+        -:   11:
+function dialog(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, int) called 0 returned 0% blocks executed 0%
+    #####:   12:int dialog(const std::string messages[],int operations){
+    %%%%%:   12-block  0
+    #####:   13:    std::string errors="";
+    %%%%%:   13-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   13-block  1
+    #####:   14:    int number=-1;
+    #####:   15:    while (number<0 || number>=operations){
+    %%%%%:   15-block  0
+    %%%%%:   15-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    %%%%%:   15-block  2
+branch  2 never executed
+branch  3 never executed (fallthrough)
+    #####:   16:        if (errors[0]!='\0') std::cout << errors << std::endl;
+    %%%%%:   16-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:   16-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   16-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    #####:   17:        for (int i=0; i<operations; i++){
+    %%%%%:   17-block  0
+    %%%%%:   17-block  1
+    %%%%%:   17-block  2
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   18:            std::cout << messages[i] << std::endl;
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   18-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+        -:   19:        }
+    #####:   20:        std::cout << "Enter operation:";
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   21:        if (!(std::cin >> number)) {
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   21-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   21-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   22:            if (check_input()) return 0;
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   22-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   22-block  2
+    #####:   23:            number=-1;
+    %%%%%:   23-block  0
+        -:   24:        }
+    #####:   25:        errors="Wrong input. Try again.\n";
+    %%%%%:   25-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   26:    }
+    #####:   27:    return number;
+    %%%%%:   27-block  0
+    #####:   28:}
+    %%%%%:   28-block  0
+call    0 never executed
+    $$$$$:   28-block  1
+call    1 never executed
+        -:   29:
+function dialog_create_card(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:   30:void dialog_create_card(Deck_of_Cards &deck){
+    #####:   31:   Card card;
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   32:   std::cout << "Enter suit and rank:\n";
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   33:   try{
+    #####:   34:        if(!(std::cin >> card)){
+    %%%%%:   34-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   34-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   34-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   35:            if (check_input()) throw Error_end_of_file{};
+    %%%%%:   35-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   35-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   35-block  2
+call    5 never executed
+call    6 never executed
+    #####:   36:            std::cout << "Wrong input" << '\n';
+    %%%%%:   36-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   36-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   37:            return;
+    %%%%%:   37-block  0
+        -:   38:        }
+    =====:   39:   }catch(const std::exception &e){
+    $$$$$:   39-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   39-block  1
+call    2 never executed
+    =====:   40:        std::cin.clear();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   41:        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    $$$$$:   41-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    =====:   42:        std::cout << e.what() << std::endl;
+    $$$$$:   42-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   42-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    =====:   43:        return;
+    $$$$$:   43-block  0
+    =====:   44:   }
+    $$$$$:   44-block  0
+call    0 never executed
+    $$$$$:   44-block  1
+call    1 never executed
+    #####:   45:   deck.add_card(card);
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   46:}
+    %%%%%:   46-block  0
+    %%%%%:   46-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    $$$$$:   46-block  2
+call    3 never executed
+        -:   47:
+function dialog_create_random_card(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:   48:void dialog_create_random_card(Deck_of_Cards &deck){
+    #####:   49:    if (deck.get_size()>=52){
+    %%%%%:   49-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   50:        std::cout << "Deck is already full\n";
+    %%%%%:   50-block  0
+call    0 never executed
+    #####:   51:        return;
+        -:   52:    }
+    #####:   53:    deck.add_random_card();
+    %%%%%:   53-block  0
+call    0 never executed
+        -:   54:}
+        -:   55:
+function dialog_compare_random_card(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:   56:void dialog_compare_random_card(Deck_of_Cards &deck){
+    #####:   57:    Card first;
+    %%%%%:   57-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   58:    Card second;
+    %%%%%:   58-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   59:    try{
+    #####:   60:        std::cout << "Input two cards:\n";
+    %%%%%:   60-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   61:        if(!(std::cin >> first >> second)){
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   61-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   61-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   61-block  3
+branch  9 never executed (fallthrough)
+branch 10 never executed
+    #####:   62:            if (check_input()) throw Error_end_of_file{};
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   62-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   62-block  2
+call    5 never executed
+call    6 never executed
+    #####:   63:            std::cout << "Wrong input" << '\n';
+    %%%%%:   63-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   63-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   64:            return;
+    %%%%%:   64-block  0
+        -:   65:        }
+    =====:   66:   }catch(const std::exception &e){
+    $$$$$:   66-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   66-block  1
+call    2 never executed
+    =====:   67:        std::cin.clear();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   68:        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    $$$$$:   68-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    =====:   69:        std::cout << e.what() << std::endl;
+    $$$$$:   69-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   69-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    =====:   70:        return;
+    $$$$$:   70-block  0
+    =====:   71:   }
+    $$$$$:   71-block  0
+call    0 never executed
+    $$$$$:   71-block  1
+call    1 never executed
+    #####:   72:    auto comparator = (first <=> second);
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   73:    if (comparator<0) std::cout << "First card < second card\n";
+    %%%%%:   73-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:   73-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   74:    else if (comparator>0) std::cout << "First card > second card\n";
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:   74-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   75:    else if (comparator==0) std::cout << "First card == second card\n";
+    %%%%%:   75-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:   75-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   76:    else std::cout << "Two cards are uncomparable\n";
+    %%%%%:   76-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   77:}
+    %%%%%:   77-block  0
+    %%%%%:   77-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:   77-block  2
+    %%%%%:   77-block  3
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    $$$$$:   77-block  4
+call    6 never executed
+    $$$$$:   77-block  5
+call    7 never executed
+        -:   78:
+function dialog_show_card_beautifully(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:   79:void dialog_show_card_beautifully(Deck_of_Cards &deck){
+        -:   80:    size_t idx;
+    #####:   81:    std::cout << "Input index of card:";
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   82:    if(!(std::cin >> idx)){
+    %%%%%:   82-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   82-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   82-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   83:        if (check_input()) throw Error_end_of_file{};
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   83-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   83-block  2
+call    5 never executed
+call    6 never executed
+    #####:   84:        std::cout << "Wrong input\n";
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   85:        return;
+    %%%%%:   85-block  0
+    %%%%%:   85-block  1
+        -:   86:    }
+    #####:   87:    if (idx>=deck.get_size()){
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   87-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    #####:   88:        std::cout << "Index out of range\n";
+    %%%%%:   88-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   89:        return;
+    %%%%%:   89-block  0
+        -:   90:    }
+    #####:   91:    std::cout << deck[idx].format() << '\n';
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   91-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   91-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   91-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   91-block  4
+call   12 never executed
+    $$$$$:   91-block  5
+call   13 never executed
+    $$$$$:   91-block  6
+        -:   92:}
+        -:   93:
+function dialog_create_random_deck(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:   94:void dialog_create_random_deck(Deck_of_Cards &deck){
+        -:   95:    size_t size;
+    #####:   96:    std::cout << "Enter size of deck:";
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   97:    if(!(std::cin >> size)){
+    %%%%%:   97-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   97-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   97-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:   98:        if (check_input()) throw Error_end_of_file{};
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   98-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   98-block  2
+call    5 never executed
+call    6 never executed
+    #####:   99:        std::cout << "Wrong input" << '\n';
+    %%%%%:   99-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   99-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:  100:        return;
+    %%%%%:  100-block  0
+        -:  101:    }
+        -:  102:    try{
+    #####:  103:        deck=Deck_of_Cards(size);
+    %%%%%:  103-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  103-block  1
+call    3 never executed
+call    4 never executed
+    $$$$$:  103-block  2
+    =====:  104:    }catch(const std::exception &e){
+    $$$$$:  104-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  104-block  1
+call    2 never executed
+    =====:  105:        std::cout << e.what() <<std::endl;
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:  105-block  0
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    =====:  106:    }
+    $$$$$:  106-block  0
+call    0 never executed
+    $$$$$:  106-block  1
+call    1 never executed
+        -:  107:}
+        -:  108:
+function dialog_create_full_deck(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  109:void dialog_create_full_deck(Deck_of_Cards &deck){
+    #####:  110:    deck=Deck_of_Cards::full_deck();
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  110-block  1
+call    3 never executed
+call    4 never executed
+    #####:  111:}
+        -:  112:
+function dialog_show_deck(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  113:void dialog_show_deck(Deck_of_Cards &deck){
+    #####:  114:    std::cout << deck;
+    %%%%%:  114-block  0
+call    0 never executed
+    #####:  115:}
+        -:  116:
+function dialog_add_random_card(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  117:void dialog_add_random_card(Deck_of_Cards &deck){
+        -:  118:    try{
+    #####:  119:        deck.add_random_card();
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:  120:    }catch(const std::exception &e){
+    $$$$$:  120-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  120-block  1
+call    2 never executed
+    =====:  121:        std::cout << e.what() << std::endl;
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:  121-block  0
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    =====:  122:    }
+    $$$$$:  122-block  0
+call    0 never executed
+    $$$$$:  122-block  1
+call    1 never executed
+    #####:  123:}
+    %%%%%:  123-block  0
+        -:  124:
+function dialog_remove_card(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  125:void dialog_remove_card(Deck_of_Cards &deck){
+        -:  126:    size_t idx;
+    #####:  127:    std::cout << "Input index of card:";
+    %%%%%:  127-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  128:    if(!(std::cin >> idx)){
+    %%%%%:  128-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  128-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  128-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  129:        if (check_input()) throw Error_end_of_file{};
+    %%%%%:  129-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  129-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  129-block  2
+call    5 never executed
+call    6 never executed
+    #####:  130:        std::cout << "Wrong input" << '\n';
+    %%%%%:  130-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  130-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:  131:        return;
+    %%%%%:  131-block  0
+        -:  132:    }
+        -:  133:    try{
+    #####:  134:        deck.remove_card_by_index(idx);
+    %%%%%:  134-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:  135:    }catch(const std::exception &e){
+    $$$$$:  135-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  135-block  1
+call    2 never executed
+    =====:  136:        std::cout << e.what() << std::endl;
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:  136-block  0
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    =====:  137:    }
+    $$$$$:  137-block  0
+call    0 never executed
+    $$$$$:  137-block  1
+call    1 never executed
+        -:  138:}
+        -:  139:
+function dialog_get_card(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  140:void dialog_get_card(Deck_of_Cards &deck){
+        -:  141:    size_t idx;
+    #####:  142:    std::cout << "Input index of card:";
+    %%%%%:  142-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  143:    if(!(std::cin >> idx)){
+    %%%%%:  143-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  143-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  143-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  144:        if (check_input()) throw Error_end_of_file{};
+    %%%%%:  144-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  144-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  144-block  2
+call    5 never executed
+call    6 never executed
+    #####:  145:        std::cout << "Wrong input" << '\n';
+    %%%%%:  145-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  145-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:  146:        return;
+    %%%%%:  146-block  0
+    %%%%%:  146-block  1
+        -:  147:    }
+    #####:  148:    if (idx>=deck.get_size()){
+    %%%%%:  148-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  148-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    #####:  149:        std::cout << "Index out of range\n";
+    %%%%%:  149-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  150:        return;
+    %%%%%:  150-block  0
+        -:  151:    }
+    #####:  152:    std::cout << deck[idx] << '\n';
+    %%%%%:  152-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  152-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  152-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+        -:  153:}
+        -:  154:
+function dialog_sort_deck(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  155:void dialog_sort_deck(Deck_of_Cards &deck){
+    #####:  156:    deck.sort();
+    %%%%%:  156-block  0
+call    0 never executed
+    #####:  157:}
+        -:  158:
+function dialog_shuffle_deck(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  159:void dialog_shuffle_deck(Deck_of_Cards &deck){
+    #####:  160:    deck.shuffle();
+    %%%%%:  160-block  0
+call    0 never executed
+    #####:  161:}
+        -:  162:
+function dialog_merge_decks(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  163:void dialog_merge_decks(Deck_of_Cards &deck){
+        -:  164:    size_t size;
+    #####:  165:    std::cout << "Enter size of second deck:";
+    %%%%%:  165-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  166:    if(!(std::cin >> size)){
+    %%%%%:  166-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  166-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  166-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  167:        if (check_input()) throw Error_end_of_file{};
+    %%%%%:  167-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  167-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  167-block  2
+call    5 never executed
+call    6 never executed
+    #####:  168:        std::cout << "Wrong input" << '\n';
+    %%%%%:  168-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  168-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:  169:        return;
+    %%%%%:  169-block  0
+        -:  170:    }
+        -:  171:    try{
+    #####:  172:        Deck_of_Cards other(size);
+    %%%%%:  172-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  173:        deck=deck+other;
+    %%%%%:  173-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  173-block  1
+call    3 never executed
+call    4 never executed
+    $$$$$:  173-block  2
+    #####:  174:    }catch(const std::exception &e){
+call    0 never executed
+    $$$$$:  174-block  0
+call    1 never executed
+    $$$$$:  174-block  1
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    $$$$$:  174-block  2
+call    4 never executed
+    =====:  175:        std::cout << e.what() <<std::endl;
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:  175-block  0
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    =====:  176:    }
+    $$$$$:  176-block  0
+call    0 never executed
+    $$$$$:  176-block  1
+call    1 never executed
+        -:  177:}
+        -:  178:
+function dialog_check(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  179:void dialog_check(Deck_of_Cards &deck){
+    #####:  180:    if (deck.have_duplicates()) std::cout << "Has duplicates\n";
+    %%%%%:  180-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:  180-block  1
+call    3 never executed
+    #####:  181:    else std::cout << "No duplicates\n";
+    %%%%%:  181-block  0
+call    0 never executed
+    #####:  182:}
+        -:  183:
+function dialog_get_group(Deck_of_Cards&) called 0 returned 0% blocks executed 0%
+    #####:  184:void dialog_get_group(Deck_of_Cards &deck){
+    #####:  185:    std::string suit;
+    %%%%%:  185-block  0
+call    0 never executed
+    #####:  186:    std::cout << "Enter suit to sort:";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  187:    if(!(std::cin >> suit)){
+    %%%%%:  187-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  187-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  187-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    #####:  188:        if (check_input()) throw Error_end_of_file{};
+    %%%%%:  188-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  188-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  188-block  2
+call    5 never executed
+call    6 never executed
+    #####:  189:        std::cout << "Wrong input" << '\n';
+    %%%%%:  189-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  189-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:  190:        return;
+    %%%%%:  190-block  0
+        -:  191:    }
+        -:  192:    try{
+    #####:  193:        std::cout << deck.filter_by_suit(suit);
+    %%%%%:  193-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  193-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  193-block  2
+call    6 never executed
+    $$$$$:  193-block  3
+call    7 never executed
+    $$$$$:  193-block  4
+    =====:  194:    }catch(const std::exception &e){
+    $$$$$:  194-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  194-block  1
+call    2 never executed
+    =====:  195:        std::cout << e.what() <<std::endl;
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:  195-block  0
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    =====:  196:    }
+    $$$$$:  196-block  0
+call    0 never executed
+    $$$$$:  196-block  1
+call    1 never executed
+    #####:  197:}
+    %%%%%:  197-block  0
+    %%%%%:  197-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    $$$$$:  197-block  2
+call    3 never executed

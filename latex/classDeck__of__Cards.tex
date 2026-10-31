@@ -1,0 +1,392 @@
+\doxysection{Deck\+\_\+of\+\_\+\+Cards Class Reference}
+\hypertarget{classDeck__of__Cards}{}\label{classDeck__of__Cards}\index{Deck\_of\_Cards@{Deck\_of\_Cards}}
+
+
+Класс -\/ колода карт  
+
+
+
+
+{\ttfamily \#include $<$Deckof\+Cards.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeck__of__Cards_a9ae3754714a54a25d3615661978f53d2}{Deck\+\_\+of\+\_\+\+Cards}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDeck__of__Cards_aad2ce02b6e406fccc92fa172b4c81346}{Deck\+\_\+of\+\_\+\+Cards}} (size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Инициализирующий конструктор, создаёт колоду определённого размера c рандомными картами \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCard}{Card}} \& \mbox{\hyperlink{classDeck__of__Cards_af15d8340797b01450d8078695f0231bd}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classCard}{Card}} \& \mbox{\hyperlink{classDeck__of__Cards_a75f54c08b00a1049e3cccf844ebf6a9e}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t x) const
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора \mbox{[}\mbox{]} для const типа \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classDeck__of__Cards_a1b44284ed3ebb5d5e3d6d3b188846e63}{get\+\_\+size}} () const
+\begin{DoxyCompactList}\small\item\em Геттер, возвращающий размер колоды \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \mbox{\hyperlink{classDeck__of__Cards_aa5069cb2bc1496e103ec2cb009fdd73f}{operator+}} (const \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&second) const
+\begin{DoxyCompactList}\small\item\em Перегрузка для оператора +. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \& \mbox{\hyperlink{classDeck__of__Cards_ad6537a6281169104b5aad981d63a7755}{operator+=}} (const \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&second)
+\begin{DoxyCompactList}\small\item\em Перегрузка для оператора +=. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDeck__of__Cards_ab3df08e7bcabb77e0b3424261942e57b}{sort}} ()
+\begin{DoxyCompactList}\small\item\em Функция для сортировки колоды \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDeck__of__Cards_ab4b3e1a92d777d6fbed4a086ec7e1a79}{shuffle}} ()
+\begin{DoxyCompactList}\small\item\em Функция для перемешивания колоды \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDeck__of__Cards_af5f0c14689e9317bd301ab6e2f931269}{have\+\_\+duplicates}} () const
+\begin{DoxyCompactList}\small\item\em Функция, проверяющая наличие дубликатов в колоде \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDeck__of__Cards_a8f14267348714143494165b73a975973}{add\+\_\+random\+\_\+card}} ()
+\begin{DoxyCompactList}\small\item\em Функция, для добавления рандомной карты \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDeck__of__Cards_a3e925281366a51fbaaa9e82c67d1357b}{add\+\_\+card}} (const \mbox{\hyperlink{classCard}{Card}} \&card)
+\begin{DoxyCompactList}\small\item\em Функция для добавления определённой карты \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDeck__of__Cards_a7fb02c6d15e4559e039e81ba41836cfa}{remove\+\_\+card\+\_\+by\+\_\+index}} (size\+\_\+t x)
+\begin{DoxyCompactList}\small\item\em Функция для удаления карты из массива по индексу \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \mbox{\hyperlink{classDeck__of__Cards_a55433972cb5a47f38e1ca7c8e6152c33}{filter\+\_\+by\+\_\+suit}} (const std\+::string \&suit) const
+\begin{DoxyCompactList}\small\item\em Функция, для фильтрации колоды по масти \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \mbox{\hyperlink{classDeck__of__Cards_a3f570def7245c9d40e75c487a2ec80c7}{full\+\_\+deck}} ()
+\begin{DoxyCompactList}\small\item\em Создаёт полную колоду из MAX\+\_\+\+SIZE карт \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \& \mbox{\hyperlink{classDeck__of__Cards_a622f26d38b707234faae8b3878998937}{operator$>$$>$}} (\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&first, \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&second)
+\begin{DoxyCompactList}\small\item\em Функция для переноса верхней (первой) карты из одной колоды в другую \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{classDeck__of__Cards_afde90eb681650fd494f5ad922e5662db}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&deck)
+\begin{DoxyCompactList}\small\item\em Перегрузка потока ввода \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classDeck__of__Cards_a0f2bf9a86a394cb0c46acb19cdb426d0}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&deck)
+\begin{DoxyCompactList}\small\item\em Перегрузка потока вывода \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс -\/ колода карт 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deck} & колода карт \\
+\hline
+{\em MAX\+\_\+\+SIZE} & максимальное количество карт в колоде \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDeck__of__Cards_a9ae3754714a54a25d3615661978f53d2}\label{classDeck__of__Cards_a9ae3754714a54a25d3615661978f53d2} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{Deck\_of\_Cards()}{Deck\_of\_Cards()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Deck\+\_\+of\+\_\+\+Cards\+::\+Deck\+\_\+of\+\_\+\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию 
+
+\Hypertarget{classDeck__of__Cards_aad2ce02b6e406fccc92fa172b4c81346}\label{classDeck__of__Cards_aad2ce02b6e406fccc92fa172b4c81346} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{Deck\_of\_Cards()}{Deck\_of\_Cards()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Deck\+\_\+of\+\_\+\+Cards\+::\+Deck\+\_\+of\+\_\+\+Cards (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Инициализирующий конструктор, создаёт колоду определённого размера c рандомными картами 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Размер колоды \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & если размер колоды \texorpdfstring{$>$}{>} MAX\+\_\+\+SIZE \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDeck__of__Cards_a3e925281366a51fbaaa9e82c67d1357b}\label{classDeck__of__Cards_a3e925281366a51fbaaa9e82c67d1357b} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!add\_card@{add\_card}}
+\index{add\_card@{add\_card}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{add\_card()}{add\_card()}}
+{\footnotesize\ttfamily void Deck\+\_\+of\+\_\+\+Cards\+::add\+\_\+card (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCard}{Card}} \&}]{card }\end{DoxyParamCaption})}
+
+
+
+Функция для добавления определённой карты 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card} & Карта, которую добавляем в колоду \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & если размер колоды \texorpdfstring{$>$}{>}=MAX\+\_\+\+SIZE \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDeck__of__Cards_a8f14267348714143494165b73a975973}\label{classDeck__of__Cards_a8f14267348714143494165b73a975973} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!add\_random\_card@{add\_random\_card}}
+\index{add\_random\_card@{add\_random\_card}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{add\_random\_card()}{add\_random\_card()}}
+{\footnotesize\ttfamily void Deck\+\_\+of\+\_\+\+Cards\+::add\+\_\+random\+\_\+card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция, для добавления рандомной карты 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & если размер колоды \texorpdfstring{$>$}{>}=MAX\+\_\+\+SIZE \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDeck__of__Cards_a55433972cb5a47f38e1ca7c8e6152c33}\label{classDeck__of__Cards_a55433972cb5a47f38e1ca7c8e6152c33} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!filter\_by\_suit@{filter\_by\_suit}}
+\index{filter\_by\_suit@{filter\_by\_suit}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{filter\_by\_suit()}{filter\_by\_suit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} Deck\+\_\+of\+\_\+\+Cards\+::filter\+\_\+by\+\_\+suit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{suit }\end{DoxyParamCaption}) const}
+
+
+
+Функция, для фильтрации колоды по масти 
+
+
+\begin{DoxyParams}{Parameters}
+{\em suit} & Масть, по которой фильтруем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards} возвращает новую колоду 
+\end{DoxyReturn}
+\Hypertarget{classDeck__of__Cards_a3f570def7245c9d40e75c487a2ec80c7}\label{classDeck__of__Cards_a3f570def7245c9d40e75c487a2ec80c7} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!full\_deck@{full\_deck}}
+\index{full\_deck@{full\_deck}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{full\_deck()}{full\_deck()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} Deck\+\_\+of\+\_\+\+Cards\+::full\+\_\+deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Создаёт полную колоду из MAX\+\_\+\+SIZE карт 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards} колода карт 
+\end{DoxyReturn}
+\Hypertarget{classDeck__of__Cards_a1b44284ed3ebb5d5e3d6d3b188846e63}\label{classDeck__of__Cards_a1b44284ed3ebb5d5e3d6d3b188846e63} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily size\+\_\+t Deck\+\_\+of\+\_\+\+Cards\+::get\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Геттер, возвращающий размер колоды 
+
+\begin{DoxyReturn}{Returns}
+int число от 0 до MAX\+\_\+\+SIZE 
+\end{DoxyReturn}
+\Hypertarget{classDeck__of__Cards_af5f0c14689e9317bd301ab6e2f931269}\label{classDeck__of__Cards_af5f0c14689e9317bd301ab6e2f931269} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!have\_duplicates@{have\_duplicates}}
+\index{have\_duplicates@{have\_duplicates}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{have\_duplicates()}{have\_duplicates()}}
+{\footnotesize\ttfamily bool Deck\+\_\+of\+\_\+\+Cards\+::have\+\_\+duplicates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функция, проверяющая наличие дубликатов в колоде 
+
+\begin{DoxyReturn}{Returns}
+true, если есть дубликаты, false, если нет 
+\end{DoxyReturn}
+\Hypertarget{classDeck__of__Cards_aa5069cb2bc1496e103ec2cb009fdd73f}\label{classDeck__of__Cards_aa5069cb2bc1496e103ec2cb009fdd73f} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!operator+@{operator+}}
+\index{operator+@{operator+}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} Deck\+\_\+of\+\_\+\+Cards\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{second }\end{DoxyParamCaption}) const}
+
+
+
+Перегрузка для оператора +. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em second} & Карта, с которой складываем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards} новая колода 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & если размер новой колоды \texorpdfstring{$>$}{>} MAX\+\_\+\+SIZE \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDeck__of__Cards_ad6537a6281169104b5aad981d63a7755}\label{classDeck__of__Cards_ad6537a6281169104b5aad981d63a7755} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \& Deck\+\_\+of\+\_\+\+Cards\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{second }\end{DoxyParamCaption})}
+
+
+
+Перегрузка для оператора +=. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em second} & Карта, с которой складываем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards} Ссылку на текущий объект 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & если размер новой колоды \texorpdfstring{$>$}{>} MAX\+\_\+\+SIZE \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDeck__of__Cards_af15d8340797b01450d8078695f0231bd}\label{classDeck__of__Cards_af15d8340797b01450d8078695f0231bd} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCard}{Card}} \& Deck\+\_\+of\+\_\+\+Cards\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора \mbox{[}\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & индекс карты \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classCard}{Card}\& карта из колоды по переданному индексу 
+\end{DoxyReturn}
+\Hypertarget{classDeck__of__Cards_a75f54c08b00a1049e3cccf844ebf6a9e}\label{classDeck__of__Cards_a75f54c08b00a1049e3cccf844ebf6a9e} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCard}{Card}} \& Deck\+\_\+of\+\_\+\+Cards\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x }\end{DoxyParamCaption}) const}
+
+
+
+Перегрузка оператора \mbox{[}\mbox{]} для const типа 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & индекс карты \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const \doxylink{classCard}{Card}\& карта из колоды по переданному индексу 
+\end{DoxyReturn}
+\Hypertarget{classDeck__of__Cards_a7fb02c6d15e4559e039e81ba41836cfa}\label{classDeck__of__Cards_a7fb02c6d15e4559e039e81ba41836cfa} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!remove\_card\_by\_index@{remove\_card\_by\_index}}
+\index{remove\_card\_by\_index@{remove\_card\_by\_index}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{remove\_card\_by\_index()}{remove\_card\_by\_index()}}
+{\footnotesize\ttfamily void Deck\+\_\+of\+\_\+\+Cards\+::remove\+\_\+card\+\_\+by\+\_\+index (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x }\end{DoxyParamCaption})}
+
+
+
+Функция для удаления карты из массива по индексу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & индекс карты \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & если индекс больше, чем размер колоды \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDeck__of__Cards_ab4b3e1a92d777d6fbed4a086ec7e1a79}\label{classDeck__of__Cards_ab4b3e1a92d777d6fbed4a086ec7e1a79} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily void Deck\+\_\+of\+\_\+\+Cards\+::shuffle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция для перемешивания колоды 
+
+\Hypertarget{classDeck__of__Cards_ab3df08e7bcabb77e0b3424261942e57b}\label{classDeck__of__Cards_ab3df08e7bcabb77e0b3424261942e57b} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!sort@{sort}}
+\index{sort@{sort}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void Deck\+\_\+of\+\_\+\+Cards\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция для сортировки колоды 
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classDeck__of__Cards_a0f2bf9a86a394cb0c46acb19cdb426d0}\label{classDeck__of__Cards_a0f2bf9a86a394cb0c46acb19cdb426d0} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{deck }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Перегрузка потока вывода 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Поток вывода \\
+\hline
+{\em deck} & Колода, которую печатаем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на выходной поток 
+\end{DoxyReturn}
+\Hypertarget{classDeck__of__Cards_a622f26d38b707234faae8b3878998937}\label{classDeck__of__Cards_a622f26d38b707234faae8b3878998937} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{first,  }\item[{\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Функция для переноса верхней (первой) карты из одной колоды в другую 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & \\
+\hline
+{\em second} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Deck\+\_\+of\+\_\+\+Card возвращает ссылку на первую колоду 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & если первая колода пустая или вторая колода полная \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classDeck__of__Cards_afde90eb681650fd494f5ad922e5662db}\label{classDeck__of__Cards_afde90eb681650fd494f5ad922e5662db} 
+\index{Deck\_of\_Cards@{Deck\_of\_Cards}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Deck\_of\_Cards@{Deck\_of\_Cards}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{deck }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Перегрузка потока ввода 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Поток ввода \\
+\hline
+{\em deck} & Колода, в которую записываем результат \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на входной поток 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{DeckofCards_8h}{Deckof\+Cards.\+h}}\item 
+lib/\mbox{\hyperlink{DeckofCards_8cpp}{Deckof\+Cards.\+cpp}}\end{DoxyCompactItemize}

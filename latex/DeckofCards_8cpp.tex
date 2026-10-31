@@ -1,0 +1,80 @@
+\doxysection{lib/\+Deckof\+Cards.cpp File Reference}
+\hypertarget{DeckofCards_8cpp}{}\label{DeckofCards_8cpp}\index{lib/DeckofCards.cpp@{lib/DeckofCards.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}Deckof\+Cards.\+h"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+Include dependency graph for Deckof\+Cards.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{DeckofCards_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \& \mbox{\hyperlink{DeckofCards_8cpp_a622f26d38b707234faae8b3878998937}{operator$>$$>$}} (\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&first, \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&second)
+\item 
+std\+::istream \& \mbox{\hyperlink{DeckofCards_8cpp_afde90eb681650fd494f5ad922e5662db}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&deck)
+\item 
+std\+::ostream \& \mbox{\hyperlink{DeckofCards_8cpp_a0f2bf9a86a394cb0c46acb19cdb426d0}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&deck)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{DeckofCards_8cpp_a0f2bf9a86a394cb0c46acb19cdb426d0}\label{DeckofCards_8cpp_a0f2bf9a86a394cb0c46acb19cdb426d0} 
+\index{DeckofCards.cpp@{DeckofCards.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!DeckofCards.cpp@{DeckofCards.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{deck }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Поток вывода \\
+\hline
+{\em deck} & Колода, которую печатаем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на выходной поток 
+\end{DoxyReturn}
+\Hypertarget{DeckofCards_8cpp_a622f26d38b707234faae8b3878998937}\label{DeckofCards_8cpp_a622f26d38b707234faae8b3878998937} 
+\index{DeckofCards.cpp@{DeckofCards.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!DeckofCards.cpp@{DeckofCards.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{first,  }\item[{\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{second }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & \\
+\hline
+{\em second} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Deck\+\_\+of\+\_\+\+Card возвращает ссылку на первую колоду 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & если первая колода пустая или вторая колода полная \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{DeckofCards_8cpp_afde90eb681650fd494f5ad922e5662db}\label{DeckofCards_8cpp_afde90eb681650fd494f5ad922e5662db} 
+\index{DeckofCards.cpp@{DeckofCards.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!DeckofCards.cpp@{DeckofCards.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{classDeck__of__Cards}{Deck\+\_\+of\+\_\+\+Cards}} \&}]{deck }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Поток ввода \\
+\hline
+{\em deck} & Колода, в которую записываем результат \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на входной поток 
+\end{DoxyReturn}

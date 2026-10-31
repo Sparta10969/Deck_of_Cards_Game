@@ -1,0 +1,1 @@
+/usr/bin/c++ --coverage CMakeFiles/main.dir/dialogue_functions.cpp.o CMakeFiles/main.dir/main.cpp.o -o main  ../lib/liblib.a 

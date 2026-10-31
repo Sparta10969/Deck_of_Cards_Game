@@ -1,0 +1,60 @@
+\doxysection{Deckof\+Cards.\+h}
+\hypertarget{DeckofCards_8h_source}{}\label{DeckofCards_8h_source}\index{lib/DeckofCards.h@{lib/DeckofCards.h}}
+\mbox{\hyperlink{DeckofCards_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DECKOFCARDS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DECKOFCARDS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{card_8h}{card.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ MAX\_SIZE=52;}
+\DoxyCodeLine{00019\ \ \ \ \ std::vector<Card>\ deck;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ set\_size(\textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classDeck__of__Cards_a9ae3754714a54a25d3615661978f53d2}{Deck\_of\_Cards}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classDeck__of__Cards_a9ae3754714a54a25d3615661978f53d2}{Deck\_of\_Cards}}(\textcolor{keywordtype}{size\_t}\ s);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\ \mbox{\hyperlink{classDeck__of__Cards_a3f570def7245c9d40e75c487a2ec80c7}{full\_deck}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{classCard}{Card}}\&\ \mbox{\hyperlink{classDeck__of__Cards_af15d8340797b01450d8078695f0231bd}{operator\ []\ }}(\textcolor{keywordtype}{size\_t}\ x);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCard}{Card}}\&\ \mbox{\hyperlink{classDeck__of__Cards_af15d8340797b01450d8078695f0231bd}{operator\ []\ }}(\textcolor{keywordtype}{size\_t}\ x)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classDeck__of__Cards_a1b44284ed3ebb5d5e3d6d3b188846e63}{get\_size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\ \mbox{\hyperlink{classDeck__of__Cards_aa5069cb2bc1496e103ec2cb009fdd73f}{operator\ +}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\&\ second)\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\&\ \mbox{\hyperlink{classDeck__of__Cards_ad6537a6281169104b5aad981d63a7755}{operator\ +=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\ \&second);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeck__of__Cards_ab3df08e7bcabb77e0b3424261942e57b}{sort}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeck__of__Cards_ab4b3e1a92d777d6fbed4a086ec7e1a79}{shuffle}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDeck__of__Cards_af5f0c14689e9317bd301ab6e2f931269}{have\_duplicates}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeck__of__Cards_a8f14267348714143494165b73a975973}{add\_random\_card}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeck__of__Cards_a3e925281366a51fbaaa9e82c67d1357b}{add\_card}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCard}{Card}}\&\ card);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDeck__of__Cards_a7fb02c6d15e4559e039e81ba41836cfa}{remove\_card\_by\_index}}(\textcolor{keywordtype}{size\_t}\ x);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\ \mbox{\hyperlink{classDeck__of__Cards_a55433972cb5a47f38e1ca7c8e6152c33}{filter\_by\_suit}}(\textcolor{keyword}{const}\ std::string\&\ suit)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\&\ \mbox{\hyperlink{classDeck__of__Cards_a622f26d38b707234faae8b3878998937}{operator\ >>\ }}(\mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\&\ first,\ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\&\ second);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{friend}\ std::istream\&\ \mbox{\hyperlink{classDeck__of__Cards_a622f26d38b707234faae8b3878998937}{operator\ >>\ }}(std::istream\&\ is,\ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\&\ deck);}
+\DoxyCodeLine{00135\ \ \ \ \ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{classDeck__of__Cards_a0f2bf9a86a394cb0c46acb19cdb426d0}{operator\ <<\ }}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classDeck__of__Cards}{Deck\_of\_Cards}}\&\ deck);}
+\DoxyCodeLine{00143\ \};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

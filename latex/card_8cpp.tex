@@ -1,0 +1,54 @@
+\doxysection{lib/card.cpp File Reference}
+\hypertarget{card_8cpp}{}\label{card_8cpp}\index{lib/card.cpp@{lib/card.cpp}}
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}card.\+h"{}}\newline
+Include dependency graph for card.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{card_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{card_8cpp_affe6fcbe91c58be4b253b300f7b0b824}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{classCard}{Card}} \&c)
+\item 
+std\+::ostream \& \mbox{\hyperlink{card_8cpp_af23e8a07194a8a091b08d69bcca4157d}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classCard}{Card}} \&c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{card_8cpp_af23e8a07194a8a091b08d69bcca4157d}\label{card_8cpp_af23e8a07194a8a091b08d69bcca4157d} 
+\index{card.cpp@{card.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!card.cpp@{card.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classCard}{Card}} \&}]{c }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Поток вывода \\
+\hline
+{\em c} & Карта, которую печатаем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на выходной поток 
+\end{DoxyReturn}
+\Hypertarget{card_8cpp_affe6fcbe91c58be4b253b300f7b0b824}\label{card_8cpp_affe6fcbe91c58be4b253b300f7b0b824} 
+\index{card.cpp@{card.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!card.cpp@{card.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{classCard}{Card}} \&}]{c }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Поток ввода \\
+\hline
+{\em c} & Карта, в которую записываем результат \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на входной поток 
+\end{DoxyReturn}

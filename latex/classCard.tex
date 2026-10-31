@@ -1,0 +1,310 @@
+\doxysection{Card Class Reference}
+\hypertarget{classCard}{}\label{classCard}\index{Card@{Card}}
+
+
+Класс -\/ игральная карта  
+
+
+
+
+{\ttfamily \#include $<$card.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCard_a783f5854cbe8c183ee3d4414c01472c0}{Card}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию\+: туз червей \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCard_a09a841ce532c4a67f13b5f8dc7451496}{Card}} (std\+::string s, int r)
+\begin{DoxyCompactList}\small\item\em Инициализирующий конструктор \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCard_a285df956187266fcd264cadecdb753a8}{random\+\_\+values}} ()
+\begin{DoxyCompactList}\small\item\em Функция, которая присваивает случайные масть и ранг карте \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCard_a9afe0480766e89843f1e02c640e11d2b}{get\+\_\+rank}} () const
+\begin{DoxyCompactList}\small\item\em Геттер, возвращающий ранг карты \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCard_aee60009fe61c61a2c35c5562e739de57}{get\+\_\+suit}} () const
+\begin{DoxyCompactList}\small\item\em Геттер, возвращающий масть карты \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCard_a795ca00bdbcd2fd0200e96c0229b8872}{set\+\_\+rank}} (int r)
+\begin{DoxyCompactList}\small\item\em Сеттер, который меняет ранг карты \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCard_a8b2f7096b22fa4fd338a80fbffb3def5}{set\+\_\+suit}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em Сеттер, который меняет масть карты \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCard_ac89ce689fefec2d466fa3357bbf70f02}{operator==}} (const \mbox{\hyperlink{classCard}{Card}} \&c) const
+\begin{DoxyCompactList}\small\item\em Перезрузка оператор для сравнения карт \end{DoxyCompactList}\item 
+std\+::partial\+\_\+ordering \mbox{\hyperlink{classCard_acbc6c1bd3e70fa3b388e4c3d4477aa09}{operator$<$=$>$}} (const \mbox{\hyperlink{classCard}{Card}} \&c) const
+\begin{DoxyCompactList}\small\item\em Сравнение карт, сравниваются только в случае одной масти, есди разные масти, то карты считаются несравнимыми \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCard_a038f3e8cf7111feb930a35ecd047838a}{get\+\_\+rank\+\_\+beautiful}} () const
+\begin{DoxyCompactList}\small\item\em Функция для "{}красивого"{} формата ранга \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCard_a03f2fdc2d4e0670fe3192797f0e8e792}{get\+\_\+suit\+\_\+beautiful}} () const
+\begin{DoxyCompactList}\small\item\em Функция для "{}красивого"{} формата масти \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCard_adf4f385a0d463c77ceed9b1f213b5874}{format}} () const
+\begin{DoxyCompactList}\small\item\em Функция для "{}красивого"{} формата карты \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{classCard_affe6fcbe91c58be4b253b300f7b0b824}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{classCard}{Card}} \&c)
+\begin{DoxyCompactList}\small\item\em Чтение карты из потока ввода (формат "{}масть ранг"{}) \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classCard_af23e8a07194a8a091b08d69bcca4157d}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classCard}{Card}} \&c)
+\begin{DoxyCompactList}\small\item\em Печать карты из потока вывода \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс -\/ игральная карта 
+
+
+\begin{DoxyParams}{Parameters}
+{\em suit} & Масть может быть 4 видов \{"{}hearts"{},"{}spades"{},"{}diamonds"{},"{}clubs"{}\} \\
+\hline
+{\em rank} & Ранг карты, принимает значения от 1 до 13 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCard_a783f5854cbe8c183ee3d4414c01472c0}\label{classCard_a783f5854cbe8c183ee3d4414c01472c0} 
+\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{Card()}{Card()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Card\+::\+Card (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор по умолчанию\+: туз червей 
+
+\Hypertarget{classCard_a09a841ce532c4a67f13b5f8dc7451496}\label{classCard_a09a841ce532c4a67f13b5f8dc7451496} 
+\index{Card@{Card}!Card@{Card}}
+\index{Card@{Card}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{Card()}{Card()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Card\+::\+Card (\begin{DoxyParamCaption}\item[{std\+::string}]{s,  }\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+Инициализирующий конструктор 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Масть\+: \{"{}hearts"{},"{}spades"{},"{}diamonds"{},"{}clubs"{}\} \\
+\hline
+{\em r} & Ранг\+: от 1 до 13 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & если ранг все диапазона от 1 до 13 или suit не является одной из 4 мастей \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCard_adf4f385a0d463c77ceed9b1f213b5874}\label{classCard_adf4f385a0d463c77ceed9b1f213b5874} 
+\index{Card@{Card}!format@{format}}
+\index{format@{format}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily std\+::string Card\+::format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функция для "{}красивого"{} формата карты 
+
+\begin{DoxyReturn}{Returns}
+std\+::string "{}rank\+\_\+beautiful\texorpdfstring{$\vert$}{|}suit\+\_\+beautiful"{} 
+\end{DoxyReturn}
+\Hypertarget{classCard_a9afe0480766e89843f1e02c640e11d2b}\label{classCard_a9afe0480766e89843f1e02c640e11d2b} 
+\index{Card@{Card}!get\_rank@{get\_rank}}
+\index{get\_rank@{get\_rank}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{get\_rank()}{get\_rank()}}
+{\footnotesize\ttfamily int Card\+::get\+\_\+rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Геттер, возвращающий ранг карты 
+
+\begin{DoxyReturn}{Returns}
+int число от 1 до 13 
+\end{DoxyReturn}
+\Hypertarget{classCard_a038f3e8cf7111feb930a35ecd047838a}\label{classCard_a038f3e8cf7111feb930a35ecd047838a} 
+\index{Card@{Card}!get\_rank\_beautiful@{get\_rank\_beautiful}}
+\index{get\_rank\_beautiful@{get\_rank\_beautiful}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{get\_rank\_beautiful()}{get\_rank\_beautiful()}}
+{\footnotesize\ttfamily std\+::string Card\+::get\+\_\+rank\+\_\+beautiful (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функция для "{}красивого"{} формата ранга 
+
+\begin{DoxyReturn}{Returns}
+std\+::string "{}\+A"{},"{}2"{},"{}3"{},"{}4"{},"{}5"{},"{}6"{},"{}7"{},"{}8"{},"{}9"{},"{}10"{},"{}\+J"{},"{}\+Q"{},"{}\+K"{} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+:logic\+\_\+error} & если ранг вне диапазона от 1 до 13 \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classCard_aee60009fe61c61a2c35c5562e739de57}\label{classCard_aee60009fe61c61a2c35c5562e739de57} 
+\index{Card@{Card}!get\_suit@{get\_suit}}
+\index{get\_suit@{get\_suit}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{get\_suit()}{get\_suit()}}
+{\footnotesize\ttfamily std\+::string Card\+::get\+\_\+suit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Геттер, возвращающий масть карты 
+
+\begin{DoxyReturn}{Returns}
+std\+::string одна из 4 мастей 
+\end{DoxyReturn}
+\Hypertarget{classCard_a03f2fdc2d4e0670fe3192797f0e8e792}\label{classCard_a03f2fdc2d4e0670fe3192797f0e8e792} 
+\index{Card@{Card}!get\_suit\_beautiful@{get\_suit\_beautiful}}
+\index{get\_suit\_beautiful@{get\_suit\_beautiful}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{get\_suit\_beautiful()}{get\_suit\_beautiful()}}
+{\footnotesize\ttfamily std\+::string Card\+::get\+\_\+suit\+\_\+beautiful (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Функция для "{}красивого"{} формата масти 
+
+\begin{DoxyReturn}{Returns}
+std\+::string "{}♥"{}, "{}♠"{}, "{}♦"{}, "{}♣"{} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+:logic\+\_\+error} & если масть не является одной из 4 \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classCard_acbc6c1bd3e70fa3b388e4c3d4477aa09}\label{classCard_acbc6c1bd3e70fa3b388e4c3d4477aa09} 
+\index{Card@{Card}!operator$<$=$>$@{operator$<$=$>$}}
+\index{operator$<$=$>$@{operator$<$=$>$}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{operator$<$=$>$()}{operator<=>()}}
+{\footnotesize\ttfamily std\+::partial\+\_\+ordering Card\+::operator$<$=$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCard}{Card}} \&}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Сравнение карт, сравниваются только в случае одной масти, есди разные масти, то карты считаются несравнимыми 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Карта, с которой сравниваем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::partial\+\_\+ordering\+:\+: less если \texorpdfstring{$\ast$}{*}this \texorpdfstring{$<$}{<} c по рангу; greater, если \texorpdfstring{$>$}{>}; equivalent, если равн; unordered, если масти разные. 
+\end{DoxyReturn}
+\Hypertarget{classCard_ac89ce689fefec2d466fa3357bbf70f02}\label{classCard_ac89ce689fefec2d466fa3357bbf70f02} 
+\index{Card@{Card}!operator==@{operator==}}
+\index{operator==@{operator==}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Card\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCard}{Card}} \&}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Перезрузка оператор для сравнения карт 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Карта, с которой сравниваем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если совпадают масти и ранги у обеих 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & Условие возникновения исключения \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classCard_a285df956187266fcd264cadecdb753a8}\label{classCard_a285df956187266fcd264cadecdb753a8} 
+\index{Card@{Card}!random\_values@{random\_values}}
+\index{random\_values@{random\_values}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{random\_values()}{random\_values()}}
+{\footnotesize\ttfamily void Card\+::random\+\_\+values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Функция, которая присваивает случайные масть и ранг карте 
+
+\Hypertarget{classCard_a795ca00bdbcd2fd0200e96c0229b8872}\label{classCard_a795ca00bdbcd2fd0200e96c0229b8872} 
+\index{Card@{Card}!set\_rank@{set\_rank}}
+\index{set\_rank@{set\_rank}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{set\_rank()}{set\_rank()}}
+{\footnotesize\ttfamily void Card\+::set\+\_\+rank (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption})}
+
+
+
+Сеттер, который меняет ранг карты 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Ранг\+: от 1 до 13 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & если ранг все диапазона от 1 до 13 \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classCard_a8b2f7096b22fa4fd338a80fbffb3def5}\label{classCard_a8b2f7096b22fa4fd338a80fbffb3def5} 
+\index{Card@{Card}!set\_suit@{set\_suit}}
+\index{set\_suit@{set\_suit}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{set\_suit()}{set\_suit()}}
+{\footnotesize\ttfamily void Card\+::set\+\_\+suit (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+Сеттер, который меняет масть карты 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Масть\+: \{"{}hearts"{},"{}spades"{},"{}diamonds"{},"{}clubs"{}\} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & если suit не является одной из 4 мастей \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classCard_af23e8a07194a8a091b08d69bcca4157d}\label{classCard_af23e8a07194a8a091b08d69bcca4157d} 
+\index{Card@{Card}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classCard}{Card}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Печать карты из потока вывода 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Поток вывода \\
+\hline
+{\em c} & Карта, которую печатаем \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на выходной поток 
+\end{DoxyReturn}
+\Hypertarget{classCard_affe6fcbe91c58be4b253b300f7b0b824}\label{classCard_affe6fcbe91c58be4b253b300f7b0b824} 
+\index{Card@{Card}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Card@{Card}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{classCard}{Card}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Чтение карты из потока ввода (формат "{}масть ранг"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & Поток ввода \\
+\hline
+{\em c} & Карта, в которую записываем результат \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ссылка на входной поток 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\mbox{\hyperlink{card_8h}{card.\+h}}\item 
+lib/\mbox{\hyperlink{card_8cpp}{card.\+cpp}}\end{DoxyCompactItemize}
