@@ -1,0 +1,7 @@
+.vscode
+build
+html
+latex
+*.html
+*.css
+*.gcov
